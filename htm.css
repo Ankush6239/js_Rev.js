@@ -1,0 +1,530 @@
+
+.void {
+    width: 100%;
+    max-width: 1024px;
+    margin: auto;
+    position: relative;
+    aspect-ratio: 1 / 1;
+    height: 413px;
+    
+    display: flex;
+  }
+    .mask{
+        width: 50% !important;
+        min-width: 50%;
+
+    }
+    .app {
+      
+      display: flex;
+      flex-direction: column;
+    }
+    
+  
+    .tag-list {
+        width: 40rem;
+        max-width:85vh;
+        display: flex;
+        flex-shrink: 0;
+        flex-direction: column;
+        gap: 1rem 0;
+        position: relative;
+        padding: 1.5rem 0;
+        overflow: hidden;
+        position: relative;
+        
+    }
+    
+    .loop-slider {
+      .inner {
+        display: flex;
+        width: fit-content;
+        animation-name: loop;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-direction: var(--direction);
+        animation-duration: var(--duration);
+      }
+    }
+    
+    .tag {
+      display: flex;
+      align-items: center;
+      gap: 0 0.2rem;
+      color: #e2e8f0;
+      font-size: 0.9rem;
+      background-color: #ffca9e;
+      border-radius: 0.4rem;
+      padding: 0.7rem 1rem;
+      margin-right: 1rem; 
+      box-shadow: 
+        0 0.1rem 0.2rem rgba(224, 96, 11, 0.459),
+        0 0.1rem 0.5rem rgb(224, 96, 11, 0.459),
+        0 0.2rem 1.5rem rgb(224, 96, 11, 0.459);
+      
+      span {
+        font-size: 1.2rem;
+        color: #64748b;
+      }
+    }
+    
+    .fade {
+      pointer-events: none;
+      background: linear-gradient(90deg, #1e293b, transparent 30%, transparent 70%, #1e293b);
+      position: absolute;
+      inset: 0;
+    }
+    
+    @keyframes loop {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+
+    
+
+
+
+/* our client heading page css */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap");
+
+:root {
+  --bg: #000000;
+  --clr-1: #ff9945;
+  --clr-2: #e77215d9;
+  --clr-3: #e77215d9;
+  --clr-4: #e77215d9;
+
+  --blur: 1rem;
+  --fs: 57px;
+  --ls: clamp(-1.75px, -0.25vw, -3.5px);
+}
+
+
+*::before,
+*::after {
+  font-family: inherit;
+  box-sizing: border-box;
+}
+.tittlePositonFortext {
+  right: 15%;
+  position: relative !important;
+}
+.content {
+  text-align: center;
+}
+
+.title {
+  font-size: var(--fs);
+  font-weight: 800;
+  letter-spacing: var(--ls);
+  position: relative;
+  overflow: hidden;
+  background: var(--bg);
+  margin: 0;
+  color: white;
+  border-radius: 10px;
+  padding: px;
+  box-shadow: 0px 4px 12px rgba(231, 114, 21, 0.5),
+    0px 16px 32px rgba(231, 114, 21, 0.4);
+    margin-top: 20px;
+}
+
+
+@media (min-width: 480.5px) and (max-width: 990px) {
+  
+}
+
+.aurora {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  mix-blend-mode: darken;
+  pointer-events: none;
+}
+
+.aurora__item {
+  overflow: hidden;
+  position: absolute;
+  width: 60vw;
+  height: 60vw;
+  background-color: var(--clr-1);
+  border-radius: 37% 29% 27% 27% / 28% 25% 41% 37%;
+  filter: blur(var(--blur));
+  mix-blend-mode: overlay;
+}
+
+.aurora__item:nth-of-type(1) {
+  top: -50%;
+  animation: aurora-border 6s ease-in-out infinite,
+    aurora-1 12s ease-in-out infinite alternate;
+}
+
+.aurora__item:nth-of-type(2) {
+  background-color: var(--clr-3);
+  right: 0;
+  top: 0;
+  animation: aurora-border 6s ease-in-out infinite,
+    aurora-2 12s ease-in-out infinite alternate;
+}
+
+.aurora__item:nth-of-type(3) {
+  background-color: var(--clr-2);
+  left: 0;
+  bottom: 0;
+  animation: aurora-border 6s ease-in-out infinite,
+    aurora-3 8s ease-in-out infinite alternate;
+}
+
+.aurora__item:nth-of-type(4) {
+  background-color: var(--clr-4);
+  right: 0;
+  bottom: -50%;
+  animation: aurora-border 6s ease-in-out infinite,
+    aurora-4 24s ease-in-out infinite alternate;
+}
+
+@keyframes aurora-1 {
+  0% {
+    top: 0;
+    right: 0;
+  }
+
+  50% {
+    top: 100%;
+    right: 75%;
+  }
+
+  75% {
+    top: 100%;
+    right: 25%;
+  }
+
+  100% {
+    top: 0;
+    right: 0;
+  }
+}
+
+@keyframes aurora-2 {
+  0% {
+    top: -50%;
+    left: 0%;
+  }
+
+  60% {
+    top: 100%;
+    left: 75%;
+  }
+
+  85% {
+    top: 100%;
+    left: 25%;
+  }
+
+  100% {
+    top: -50%;
+    left: 0%;
+  }
+}
+
+@keyframes aurora-3 {
+  0% {
+    bottom: 0;
+    left: 0;
+  }
+
+  40% {
+    bottom: 100%;
+    left: 75%;
+  }
+
+  65% {
+    bottom: 40%;
+    left: 50%;
+  }
+
+  100% {
+    bottom: 0;
+    left: 0;
+  }
+}
+
+@keyframes aurora-4 {
+  0% {
+    bottom: -50%;
+    right: 0;
+  }
+
+  50% {
+    bottom: 0%;
+    right: 40%;
+  }
+
+  90% {
+    bottom: 50%;
+    right: 25%;
+  }
+
+  100% {
+    bottom: -50%;
+    right: 0;
+  }
+}
+
+@keyframes aurora-border {
+  0% {
+    border-radius: 37% 29% 27% 27% / 28% 25% 41% 37%;
+  }
+
+  25% {
+    border-radius: 47% 29% 39% 49% / 61% 19% 66% 26%;
+  }
+
+  50% {
+    border-radius: 57% 23% 47% 72% / 63% 17% 66% 33%;
+  }
+
+  75% {
+    border-radius: 28% 49% 29% 100% / 93% 20% 64% 25%;
+  }
+
+  100% {
+    border-radius: 37% 29% 27% 27% / 28% 25% 41% 37%;
+  }
+}
+
+.center-circle {
+    position: absolute;
+    width: 230px;
+    aspect-ratio: 1 / 0;
+    left: 50%;
+    top: 60%;
+    transform: translate(-50%, -15%);
+    background-image: url("/rounded.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 0px 18px 36px -18px rgb(231, 114, 21, 0.5),
+      0px 30px 60px -12px rgba(231, 114, 21, 0.5);
+    border-radius: 50%;
+    z-index: 1;
+  }
+  
+.roundedCarouselText {
+    font-size: 30px;
+    font-weight: 600 !important;
+    line-height: 1.9rem;
+    margin-top: 60px;
+    width: 200px;
+    text-align: left;
+  }
+
+  .imgAdjustment{
+    width: auto;
+    height: 50px;
+    object-fit: cover;
+  }
+
+  /* Default styles (for larger screens) */
+
+/* Extra Large Screens (Desktops & Large Monitors) */
+@media (min-width: 1200px) {
+   
+}
+
+/* Large Screens (Laptops & Small Desktops) */
+@media (max-width: 1199px) {
+  
+}
+
+/* Medium Screens (Tablets) */
+@media (max-width: 991px) {
+    .mask{
+        width: 50% !important;
+    }
+    .app{
+        width: 50% !important;
+    }
+    .center-circle{
+        position: absolute;
+        width: 150px;
+        aspect-ratio: 1 / 0;
+        left: 50%;
+        top: 60%;
+        transform: translate(-50%, -15%);
+        background-image: url("/rounded.jpeg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        box-shadow: 0px 18px 36px -18px rgb(231, 114, 21, 0.5), 0px 30px 60px -12px rgba(231, 114, 21, 0.5);
+        border-radius: 50%;
+        z-index: 1;
+        }
+
+
+  .title {
+    font-size: 24px;
+    font-weight: 550;
+    letter-spacing: var(--ls);
+    position: relative;
+    overflow: hidden;
+    background: var(--bg);
+    margin: 0;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(231, 114, 21, 0.5), 0px 16px 32px rgba(231, 114, 21, 0.4);
+  }
+  .tittlePositonFortext {
+    right: 20px;
+    position: relative !important;
+  }
+
+  .roundedCarouselText {
+    font-size: 24px !important;
+    font-weight: 550 !important;
+    line-height: 1.3em !important;
+    margin-top: 40px !important;
+    width: 175px !important;
+    text-align: left;
+  }
+
+  .imgAdjustment{
+    width: auto;
+    height: 30px;
+    object-fit: cover;
+  }
+}
+
+/* Small Screens (Landscape Phones) */
+@media (max-width: 767px) {
+ 
+}
+
+/* Extra Small Screens (Portrait Phones) */
+@media (max-width: 576px) {
+    .mask{
+        width: 50% !important;
+    }
+    .app{
+        width: 50% !important;
+    }
+    .center-circle{
+        position: absolute;
+        width: 100px;
+        aspect-ratio: 1 / 0;
+        left: 50%;
+        top: 40%;
+        transform: translate(-50%, -15%);
+        background-image: url("/rounded.jpeg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        box-shadow: 0px 18px 36px -18px rgb(231, 114, 21, 0.5), 0px 30px 60px -12px rgba(231, 114, 21, 0.5);
+        border-radius: 50%;
+        z-index: 1;
+        }
+
+
+  .title {
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: var(--ls);
+    position: relative;
+    overflow: hidden;
+    background: var(--bg);
+    margin: 0;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(231, 114, 21, 0.5),
+      0px 16px 32px rgba(231, 114, 21, 0.4);
+  }
+  .tittlePositonFortext {
+    right: 7px;
+    position: relative !important;
+    
+}
+
+.roundedCarouselText {
+    font-size: 16px !important;
+    font-weight: 550 !important;
+    line-height: 1.8em !important;
+    margin-top: 40px !important;
+    width: 120px !important;
+    text-align: left;
+  }
+
+  .imgAdjustment{
+    width: auto;
+    height: 20px;
+    object-fit: cover;
+  }
+  
+}
+
+/* Very Small Screens (Below 375px) */
+@media (max-width: 375px) {
+    .mask{
+        width: 50% !important;
+    }
+    .app{
+        width: 50% !important;
+    }
+    .center-circle{
+        position: absolute;
+        width: 100px;
+        aspect-ratio: 1 / 0;
+        left: 50%;
+        top: 40%;
+        transform: translate(-50%, -15%);
+        background-image: url("/rounded.jpeg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        box-shadow: 0px 18px 36px -18px rgb(231, 114, 21, 0.5), 0px 30px 60px -12px rgba(231, 114, 21, 0.5);
+        border-radius: 50%;
+        z-index: 1;
+        }
+
+
+  .title {
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: var(--ls);
+    position: relative;
+    overflow: hidden;
+    background: var(--bg);
+    margin: 0;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(231, 114, 21, 0.5),
+      0px 16px 32px rgba(231, 114, 21, 0.4);
+  }
+  .tittlePositonFortext {
+    right: 7px;
+    position: relative !important;
+  }
+
+  .roundedCarouselText {
+    font-size: 16px !important;
+    font-weight: 550 !important;
+    line-height: 1.8em !important;
+    margin-top: 40px !important;
+    width: 120px !important;
+    text-align: left;
+  }
+
+  .imgAdjustment{
+    width: auto;
+    height: 20px;
+    object-fit: cover;
+  }
+
+}
