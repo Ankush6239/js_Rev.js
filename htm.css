@@ -22,7 +22,7 @@
     
   
     .tag-list {
-        width: 40rem;
+        width: 50rem;
         max-width:85vh;
         display: flex;
         flex-shrink: 0;
@@ -366,7 +366,7 @@
         background-repeat: no-repeat;
         box-shadow: 0px 18px 36px -18px rgb(231, 114, 21, 0.5), 0px 30px 60px -12px rgba(231, 114, 21, 0.5);
         border-radius: 50%;
-        z-index: 1;
+        z-index: 1;responsive, and delivered exactly what we needed. Highly recommend!" — John Doe, CEO of XYZ 
         }
 
 
@@ -382,6 +382,7 @@
     border-radius: 10px;
     box-shadow: 0px 4px 12px rgba(231, 114, 21, 0.5), 0px 16px 32px rgba(231, 114, 21, 0.4);
   }
+
   .tittlePositonFortext {
     right: 20px;
     position: relative !important;
@@ -453,7 +454,7 @@
 }
 
 .roundedCarouselText {
-    font-size: 16px !important;
+      font-size: 16px !important;
     font-weight: 550 !important;
     line-height: 1.8em !important;
     margin-top: 40px !important;
@@ -527,4 +528,8 @@
     object-fit: cover;
   }
 
+}
+
+.container{
+  width: 100px !important;
 }

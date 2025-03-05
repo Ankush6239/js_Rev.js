@@ -229,3 +229,17 @@
 
 // console.log(primeNumbers);
 
+// let arrName = [
+//     'ankush',
+//     'mandeep',
+//     'babita',
+//     'anshu'
+// ];
+
+// function anku(){
+//   for(let i = 0; i <= arrName.length: i++){
+//     console.log()
+//   }  
+// }
+
+0

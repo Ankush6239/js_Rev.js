@@ -1,0 +1,93 @@
+  
+const [navdropDown,setnavdropDown]= useState(false);
+const [navdropDown1,setnavdropDown2] = useState(false);
+const [selectValue,setSelectvalue]= useState('');
+const [subMenuPunjab, setSubMenuPunjab] = useState(false);
+const [subMenuDelhi, setSubMenuDelhi] = useState(false);
+
+   const handleSelect=(value)=>{
+    setSelectvalue(value);
+    setnavdropDown(false);
+    setnavdropDown2(false);
+     setSubMenuPunjab(false);
+     setSubMenuDelhi(false);
+  }
+
+  
+
+
+
+  <div className="input-group mt-3  mx-auto newSearchBar">
+        {/* Main Dropdown Button */}
+        <span
+          className="btn btn-secondary newSearchButton"
+          type="button"
+          id="basic-addon2"
+          onClick={() => setnavdropDown(!navdropDown)}
+          
+        >
+          Select Your City
+        </span>
+
+        {/* Main Dropdown Menu */}
+        {navdropDown && (
+          <div className="dropdown-menu show InputborderSet mt-5">
+            <ul className="list-unstyled m-0"
+            onMouseLeave={()=>setnavdropDown(false)}
+            >
+              <li
+                className="dropdown-item"
+                onClick={() => setnavdropDown2(true)}
+                onMouseLeave={() => setnavdropDown2(false)}
+                onDoubleClick={()=> handleSelect("Punjab")}
+              >
+                Punjab
+                {navdropDown1 && (
+                  <div className="dropdown-menu show position-absolute start-50 top-0">
+                    <ul className="list-unstyled m-0">
+                      <li className="dropdown-item" onClick={() => handleSelect("Amritsar")}>Amritsar</li>
+                      <li className="dropdown-item" onClick={() => handleSelect("Ludhiana")}>Ludhiana</li>
+                      <li className="dropdown-item" onClick={() => handleSelect("Mohali")}>Mohali</li>
+                      <li className="dropdown-item" onClick={() => handleSelect("Zirakpur")}>Zirkpur</li>
+                    </ul>
+                  </div>
+                )}
+              </li>
+              <li className="dropdown-item"
+             onClick={() => setSubMenuDelhi(true)}
+             onMouseLeave={() => setSubMenuDelhi(false)}
+             onDoubleClick={()=> handleSelect("Delhi")}
+               >
+                Delhi
+              {subMenuDelhi && (
+                  <div className="dropdown-menu show position-absolute start-50 top-0  h-100">
+                    <ul className="list-unstyled m-0">
+                      <li className="dropdown-item" onClick={() => handleSelect("New Delhi")}>New Delhi</li>
+                      <li className="dropdown-item" onClick={() => handleSelect("Janakpuri East, New Delhi")}>Janakpuri East, New Delhi</li>
+                    </ul>
+                  </div>
+                )}
+
+              </li>
+              {/* <li className="dropdown-item" onClick={() => handleSelect("3")}>3</li>
+              <li className="dropdown-item" onClick={() => handleSelect("4")}>4</li> */}
+            </ul>
+          </div>
+        )}
+
+        {/* Input Field */}
+        <input
+          type="text"
+          className="form-control w-50 "
+          placeholder="Search Location "
+          aria-label="Recipient's username"
+          aria-describedby="basic-addon2"
+          value={selectValue}
+          onChange={(e)=> setSelectvalue(e.target.value)}
+        />
+      
+ 
+        <span type='button' onClick={handleSearchClick} className="SearchIcon newsearchInputBar d-flex justify-content-end">
+        <Image src="/ColorSearchicon.svg" width={23} height={23} alt="Search" />
+        </span>
+      </div>
